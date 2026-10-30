@@ -17,9 +17,11 @@ struct TODOMacLabApp: App {
             CommandGroup(replacing: .newItem) {
                 Button("Nueva tarea") {
                     // MAC 2: cambia isPresentingNewTodo a true (una línea).
+                    isPresentingNewTodo = true
                 }
                 // MAC 3: agrega el atajo Command + N (un modificador).
                 .disabled(isPresentingNewTodo)
+                .keyboardShortcut("n", modifiers: .command)
             }
         }
     }
